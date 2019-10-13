@@ -1,4 +1,3 @@
 *.swp
 *.swo
-static
-
+static/bundle.js
