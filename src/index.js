@@ -1,34 +1,34 @@
-import VanillaJSRouter from 'vanilla-js-router'
+import VanillaJSRouter from 'vanilla-js-router';
 
 function home() {
-  const home = document.createElement('div')
-  home.innerHTML = 'Home'
-  return home
+  const home = document.createElement('div');
+  home.innerHTML = 'home';
+  return home;
 }
 function about() {
-  const about = document.createElement('div')
-  about.innerHTML = 'about'
-  return about
+  const about = document.createElement('div');
+  about.innerHTML = 'about';
+  return about;
 }
 function projects() {
-  const projects = document.createElement('div')
-  projects.innerHTML = 'projects'
-  return projects
+  const projects = document.createElement('div');
+  projects.innerHTML = 'projects';
+  return projects;
 }
 function project({ id }) {
-  const project = document.createElement('div')
-  project.innerHTML = `project ${id}`
-  return project
+  const project = document.createElement('div');
+  project.innerHTML = `project ${id}`;
+  return project;
 }
 function projectAction({ id, action }) {
-  const projectAction = document.createElement('div')
-  projectAction.innerHTML = `${action} project ${id}`
-  return projectAction
+  const projectAction = document.createElement('div');
+  projectAction.innerHTML = `${action} project ${id}`;
+  return projectAction;
 }
 function contact() {
-  const contact = document.createElement('div')
-  contact.innerHTML = 'contact'
-  return contact
+  const contact = document.createElement('div');
+  contact.innerHTML = 'contact';
+  return contact;
 }
 
 const router = new VanillaJSRouter(
@@ -48,4 +48,4 @@ const router = new VanillaJSRouter(
     header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a class="router-link" href="/projects/1">Project 1</a>`,
     footer: 'footer text',
   },
-)
+);

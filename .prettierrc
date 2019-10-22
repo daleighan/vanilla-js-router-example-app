@@ -1,15 +1,17 @@
 {
   "trailingComma": "all",
   "tabWidth": 2,
-  "semi": false,
+  "arrowParems": "always",
+  "semi": true,
   "singleQuote": true,
   "bracketSpacing": true,
   "overrides": [
-    {
+    {   
       "files": "*.js",
       "options": {
         "parser": "flow"
-      }
-    }
+      }   
+    }   
   ]
 }
+
