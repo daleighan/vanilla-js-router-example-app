@@ -20,6 +20,11 @@ function project() {
   project.innerHTML = 'Project'
   return project
 }
+function projectAction() {
+  const projectAction = document.createElement('div')
+  projectAction.innerHTML = 'Project'
+  return projectAction
+}
 function contact() {
   const contact = document.createElement('div')
   contact.innerHTML = 'Contact'
@@ -33,6 +38,7 @@ const router = new VanillaJSRouter(
     '/about': about,
     '/projects': projects,
     '/projects/:id': project,
+    '/projects/:id/:action': projectAction,
     '/contact': contact,
   },
   {
