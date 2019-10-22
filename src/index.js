@@ -15,6 +15,11 @@ function projects() {
   projects.innerHTML = 'Projects'
   return projects
 }
+function project() {
+  const project = document.createElement('div')
+  project.innerHTML = 'Project'
+  return project
+}
 function contact() {
   const contact = document.createElement('div')
   contact.innerHTML = 'Contact'
@@ -33,7 +38,7 @@ const router = new VanillaJSRouter(
   {
     debug: process.env.NODE_ENV !== 'production',
     errorHTML: '<div>Route Not Found</div>',
-    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a href="/projects/1">Project 1</a>`,
+    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a class="router-link" href="/projects/1">Project 1</a>`,
     footer: 'footer text',
   },
 )
