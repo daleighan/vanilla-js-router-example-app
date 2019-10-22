@@ -1,11 +1,20 @@
 import VanillaJSRouter from 'vanilla-js-router'
 
-const home = document.createElement('div')
-home.innerHTML = 'Home'
-const about = document.createElement('div')
-about.innerHTML = 'About'
-const projects = document.createElement('div')
-projects.innerHTML = 'Projects'
+function home() {
+  const home = document.createElement('div')
+  home.innerHTML = 'Home'
+  return home
+}
+function about() {
+  const about = document.createElement('div')
+  about.innerHTML = 'About'
+  return about
+}
+function projects() {
+  const projects = document.createElement('div')
+  projects.innerHTML = 'Projects'
+  return projects
+}
 function contact() {
   const contact = document.createElement('div')
   contact.innerHTML = 'Contact'
@@ -18,12 +27,13 @@ const router = new VanillaJSRouter(
     '/': home,
     '/about': about,
     '/projects': projects,
+    '/projects/:id': project,
     '/contact': contact,
   },
   {
     debug: process.env.NODE_ENV !== 'production',
     errorHTML: '<div>Route Not Found</div>',
-    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a>`,
+    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a href="/projects/1">Project 1</a>`,
     footer: 'footer text',
   },
 )
