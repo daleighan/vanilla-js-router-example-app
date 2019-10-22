@@ -7,27 +7,27 @@ function home() {
 }
 function about() {
   const about = document.createElement('div')
-  about.innerHTML = 'About'
+  about.innerHTML = 'about'
   return about
 }
 function projects() {
   const projects = document.createElement('div')
-  projects.innerHTML = 'Projects'
+  projects.innerHTML = 'projects'
   return projects
 }
-function project() {
+function project({ id }) {
   const project = document.createElement('div')
-  project.innerHTML = 'Project'
+  project.innerHTML = `project ${id}`
   return project
 }
-function projectAction() {
+function projectAction({ id, action }) {
   const projectAction = document.createElement('div')
-  projectAction.innerHTML = 'Project'
+  projectAction.innerHTML = `${action} project ${id}`
   return projectAction
 }
 function contact() {
   const contact = document.createElement('div')
-  contact.innerHTML = 'Contact'
+  contact.innerHTML = 'contact'
   return contact
 }
 
@@ -39,6 +39,7 @@ const router = new VanillaJSRouter(
     '/projects': projects,
     '/projects/:id': project,
     '/projects/:id/:action': projectAction,
+    '/projects/:id/:bbbb': projectAction,
     '/contact': contact,
   },
   {
