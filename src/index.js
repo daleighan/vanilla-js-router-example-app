@@ -15,14 +15,14 @@ function projects() {
   projects.innerHTML = 'projects';
   return projects;
 }
-function project({ id }) {
+function project({ params }) {
   const project = document.createElement('div');
-  project.innerHTML = `project ${id}`;
+  project.innerHTML = `project ${params.id}`;
   return project;
 }
-function projectAction({ id, action }) {
+function projectAction({ params }) {
   const projectAction = document.createElement('div');
-  projectAction.innerHTML = `${action} project ${id}`;
+  projectAction.innerHTML = `${params.action} project ${params.id}`;
   return projectAction;
 }
 function contact() {
