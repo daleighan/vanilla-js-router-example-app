@@ -20,11 +20,7 @@ function project({ params }) {
   project.innerHTML = `project ${params.id}`;
   return project;
 }
-function projectAction({ params }) {
-  const projectAction = document.createElement('div');
-  projectAction.innerHTML = `${params.action} project ${params.id}`;
-  return projectAction;
-}
+
 function contact() {
   const contact = document.createElement('div');
   contact.innerHTML = 'contact';
@@ -36,16 +32,13 @@ const router = new VanillaJSRouter(
   {
     '/': home,
     '/about': about,
-    '/projects': projects,
     '/projects/:id': project,
-    '/projects/:id/:action': projectAction,
-    '/projects/:id/:bbbb': projectAction,
     '/contact': contact,
   },
   {
     debug: process.env.NODE_ENV !== 'production',
     errorHTML: '<div>Route Not Found</div>',
-    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/projects">Projects</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a class="router-link" href="/projects/1">Project 1</a>`,
+    header: `<a class="router-link" href="/">Home</a><a class="router-link" href="/about">About Me</a><a class="router-link" href="/contact">Reach Out</a><a class="router-link" href="/projects/1">Project 1</a>`,
     footer: 'footer text',
   },
 );
