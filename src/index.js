@@ -1,4 +1,4 @@
-import VanillaJSRouter from 'vanilla-js-router';
+import VanillaJSRouter from '@daleighan/vanilla-js-router';
 
 function Home() {
   const home = document.createElement('div');
