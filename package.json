@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "vanilla-js-router": "file:../VanillaJSRouter"
+    "@daleighan/vanilla-js-router": "^0.1.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
