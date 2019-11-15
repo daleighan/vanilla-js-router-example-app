@@ -2,25 +2,25 @@ import VanillaJSRouter from 'vanilla-js-router';
 
 function Home() {
   const home = document.createElement('div');
-  home.innerHTML = 'home';
+  home.textContent = 'home';
   return home;
 }
 
 function About() {
   const about = document.createElement('div');
-  about.innerHTML = 'about';
+  about.textContent = 'about';
   return about;
 }
 
 function Project({ params }) {
   const project = document.createElement('div');
-  project.innerHTML = `project ${params.id}`;
+  project.textContent = `project ${params.id}`;
   return project;
 }
 
 function Contact() {
   const contact = document.createElement('div');
-  contact.innerHTML = 'contact';
+  contact.textContent = 'contact';
   return contact;
 }
 
